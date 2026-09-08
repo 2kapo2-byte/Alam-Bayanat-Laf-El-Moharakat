@@ -15,6 +15,8 @@ jobs:
       - run: dart format lib test
       - run: flutter analyze
       - run: flutter test
+      - name: Generate Android platform
+        run: flutter create . --platforms=android --project-name alam_bayanat_laf_el_moharakat
       - name: Build release APK
         run: flutter build apk --release
       - name: Upload release APK
